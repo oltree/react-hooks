@@ -1,6 +1,7 @@
+import { memo } from 'react';
 import styles from './styles.css';
 
-export const Button = ({ onClick, ...props }) => {
+export const Button = memo(({ onClick, ...props }) => {
   console.log('rerender button');
 
   return (
@@ -10,4 +11,4 @@ export const Button = ({ onClick, ...props }) => {
       onClick={() => onClick(props.children)}
     />
   );
-};
+});
