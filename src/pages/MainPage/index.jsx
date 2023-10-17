@@ -14,9 +14,9 @@ export const MainPage = () => {
     <div styles={styles.wrapper}>
       <p>Theme</p>
       <Button onClick={() => setMode('light')}>Light</Button>
-      <Button onClick={() => setMode('dark')}>Light</Button>
+      <Button onClick={() => setMode('dark')}>Dark</Button>
       <div className={styles.currWrapper}>
-        <Currency />
+        <Currency mode={mode} />
       </div>
     </div>
   );
